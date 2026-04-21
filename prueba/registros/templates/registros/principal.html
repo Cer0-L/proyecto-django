@@ -14,7 +14,7 @@
             <div class="page-header">
                 <div class="page-title">
                     <h3>Alumnos
-                    <small>Lista de Alumnos </small></h3>
+                    <small style="color: #555555;">Lista de Alumnos </small></h3>
                 </div>
             </div>
 {% endblock %}
@@ -35,7 +35,7 @@
         {% for alumno in 8A %}
         <tr>
             <td class="text-center">
-                <img src="{{ alumno.imagen.url }}" alt="" class="img-media">
+                <img src="{{ alumno.imagen.url }}" alt="Fotografía del alumno {{ alumno.nombre }}" class="img-media">
             </td>
             <td class="text-semibold">{{ alumno.matricula }}</td>
             <td class="muted">{{ alumno.nombre }}</td>

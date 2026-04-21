@@ -1,10 +1,10 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>{% block titulo %} Ejemplo {% endblock %}</title>
 
 
@@ -67,7 +67,7 @@
 		<div class="sidebar">
             <div class="user-menu dropdown">
                 <a href="#">
-                    <img src="{%block imagen%}{%endblock%}" >
+                    <img src="{%block imagen%}{%endblock%}" alt="Icono de la sección actual">
                     <div class="user-info">
                         Principal <span>DSM</span>
                     </div>
@@ -90,23 +90,24 @@
 		<!-- /sidebar -->
 
 	</div>
-    <div class="page-content">
+    <main class="page-content">
         {% block encabezado%}
         {% endblock %}
 
                  <div class="breadcrumb-line">
             <ul class="breadcrumb">
-                <a href="{%url 'Principal'%}">
-                {%if request.path == '/' %}
-                Principal
-                {%else%}
-                Principal{{request.path}}
-                {%endif%}
-                </a>
+                <li><a href="{%url 'Principal'%}">
+                    {%if request.path == '/' %}
+                    Principal
+                    {%else%}
+                    Principal{{request.path}}
+                    {%endif%}
+                    </a>
+                </li> 
             </ul>
         </div>
 
-    </div>
+    </main>
     <div class="page-content">
     
         {% block contenido %}
