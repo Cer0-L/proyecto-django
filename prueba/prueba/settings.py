@@ -28,7 +28,9 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-
+SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 # Application definition
 
 INSTALLED_APPS = [
@@ -149,3 +151,15 @@ CKEDITOR_CONFIGS ={
     }
 
 }
+
+# 1. Fuerza el uso de HSTS (Lighthouse: "Use a strong HSTS policy")
+SECURE_HSTS_SECONDS = 31536000  # 1 año
+SECURE_HSTS_INCLUDE_SUBDOMAINS = True
+SECURE_HSTS_PRELOAD = True
+
+# 2. Protecciones extra para el navegador
+SECURE_BROWSER_XSS_FILTER = True
+SECURE_CONTENT_TYPE_NOSNIFF = True
+
+# 3. Forzar redirección a HTTPS (opcional pero recomendado)
+SECURE_SSL_REDIRECT = True
