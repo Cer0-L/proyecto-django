@@ -2,16 +2,14 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>{% block titulo %} Ejemplo {% endblock %}</title>
-
-
-
-
-
-
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1, maximum-scale=1">
+    
+    <meta name="description" content="{% block descripcion %}Sistema de gestión de alumnos y comentarios.{% endblock %}">
+    <title>{% block titulo %} Ejemplo {% endblock %}</title>
+    
 {% load static %}
 <link href="{% static 'inicio/css/bootstrap.min.css' %}" rel="stylesheet" type="text/css">
 <link href="{% static 'inicio/css/londinium-theme.css' %}" rel="stylesheet" type="text/css">
