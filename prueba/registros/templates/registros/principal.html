@@ -6,7 +6,7 @@
 
 {%block imagen%}
     {%load static%} 
-    {%static 'inicio/images/home.png'%}
+    {%static 'inicio/imagenes/home.png'%}
 {% endblock %}
 
 
@@ -37,7 +37,7 @@
         {% for alumno in 8A %}
         <tr>
             <td class="text-center">
-                <img src="{{ alumno.imagen.url }}" alt="Fotografía del alumno {{ alumno.nombre }}" class="img-media">
+                <img src="{{ alumno.imagen.url }}" alt="Fotografía del alumno {{ alumno.nombre }}" class="img-media" width="41" height="70" loading="lazy">
             </td>
             <td class="text-semibold">{{ alumno.matricula }}</td>
             <td class="muted">{{ alumno.nombre }}</td>
