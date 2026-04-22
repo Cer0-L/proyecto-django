@@ -37,7 +37,8 @@
         {% for alumno in 8A %}
         <tr>
             <td class="text-center">
-                <img src="{{ alumno.imagen.url }}" alt="Fotografía del alumno {{ alumno.nombre }}" class="img-media" width="41" height="70" loading="lazy">
+                <img src="{{ alumno.imagen.url }}" alt="Fotografía del alumno {{ alumno.nombre }}" class="img-media" width="41" height="70" 
+                {% if forloop.first %} fetchpriority="high" {% else %} loading="lazy" {% endif %}>
             </td>
             <td class="text-semibold">{{ alumno.matricula }}</td>
             <td class="muted">{{ alumno.nombre }}</td>
